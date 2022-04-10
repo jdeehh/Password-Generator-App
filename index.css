@@ -2,10 +2,9 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: #202B3C;
-    max-width: 550px;
 }
 
-html, body, h1{
+html, body{
     display: flex;
     flex-direction: column;
 }
