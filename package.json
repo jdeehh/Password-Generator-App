@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "Password Generator App",
   "devDependencies": {
     "webpack": "^2.0",
     "babel-core": "^6.0",
