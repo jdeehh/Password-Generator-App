@@ -26,15 +26,52 @@ img{
     padding: 0 0.9em;
 }
 
-input, button{
+input, select, button{
     border: none;
     border-radius: 0.3em;
 }
 
-input{
+input, select{
     background: #273549;
+    cursor: pointer;
+}
+
+input{
     height: 1.8rem;
     margin: 0.6em 0.6em 0.7em 0;
+}
+
+button{
+    display: flex;
+    font-weight: bold;
+    font-size: 0.85rem;
+    background: #10B981;
+    padding: 0.6em 1em 0.5em 0;
+    cursor: pointer;
+}
+
+
+
+label{
+    color: grey;
+    padding-left: 3em;
+}
+
+select{
+    width: 20%;
+}
+
+input, select, .green{
+    color: #10B981;
+}
+
+button, .white{
+    color: #fff;
+}
+
+button:hover, button:focus{
+    background: #273549;
+    color: #10B981;
 }
 
 .header, .btn{
@@ -51,18 +88,46 @@ input{
     border-top: grey 1px solid;  
 }
 
-button{
+.btn{
     display: flex;
-    font-weight: bold;
-    font-size: 0.85rem;
-    background: #10B981;
-    padding: 0.6em 1em 0.5em 0;
+    align-items: center;
+    justify-content: space-between;
 }
 
-button, .white{
-    color: #fff;
+.tooltip {
+  position: relative;
+  display: inline-block;
 }
 
-input, .green{
-    color: #10B981;
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #222;
+  color: #10B981;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 45%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #222 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
